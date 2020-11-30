@@ -16,6 +16,9 @@ blocks:
             - cache restore
             - pip install --cache-dir .pip_cache -r requirements.txt
             - cache store
+      prologue:
+        commands:
+          - echo "completed."
   - name: Test
     task:
       prologue:
